@@ -4,6 +4,6 @@ Project from udemy course ["Building Modern Web Applications with Go"](https://w
 This repo covers first 5 sections of course:
 - Introduction
 - Overview of the Go language 
-- Building a Basec Web Application 
+- Building a Basic Web Application 
 - Improved Routing & Middleware
 - State Management with Sessions
