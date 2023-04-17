@@ -1,8 +1,10 @@
 package main
 
 import (
+	"encoding/gob"
 	"github.com/KarineAyrs/udemyBMWAG/internal/config"
 	"github.com/KarineAyrs/udemyBMWAG/internal/handlers"
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
 	"github.com/KarineAyrs/udemyBMWAG/internal/render"
 	"github.com/alexedwards/scs/v2"
 	"log"
@@ -16,6 +18,9 @@ var app config.AppConfig
 var session *scs.SessionManager
 
 func main() {
+
+	// what am I going to put in the session
+	gob.Register(models.Reservation{})
 
 	// change this to true when in production
 	app.InProduction = false
