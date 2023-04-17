@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/KarineAyrs/udemyBMWAG/pkg/config"
-	"github.com/KarineAyrs/udemyBMWAG/pkg/handlers"
-	"github.com/KarineAyrs/udemyBMWAG/pkg/render"
+	"github.com/KarineAyrs/udemyBMWAG/internal/config"
+	"github.com/KarineAyrs/udemyBMWAG/internal/handlers"
+	"github.com/KarineAyrs/udemyBMWAG/internal/render"
 	"github.com/alexedwards/scs/v2"
 	"log"
 	"net/http"
