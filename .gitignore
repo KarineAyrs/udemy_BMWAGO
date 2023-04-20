@@ -119,4 +119,8 @@ fabric.properties
 modules.xml
 vsc.xml
 .idea
+cmd/web/coverage.out
+internal/handlers/coverage.out
+internal/forms/coverage.out
+bookings
 
