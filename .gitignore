@@ -123,4 +123,5 @@ cmd/web/coverage.out
 internal/handlers/coverage.out
 internal/forms/coverage.out
 bookings
-
+database.yml
+migrations/schema.sql
