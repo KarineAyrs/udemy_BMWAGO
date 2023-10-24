@@ -17,7 +17,7 @@ var app *config.AppConfig
 var pathToTemplates = "./templates"
 var functions = template.FuncMap{}
 
-func NewTemplates(a *config.AppConfig) {
+func NewRenderer(a *config.AppConfig) {
 	app = a
 }
 
