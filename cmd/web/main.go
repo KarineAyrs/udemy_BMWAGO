@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/gob"
+	"fmt"
 	"github.com/KarineAyrs/udemyBMWAG/internal/config"
 	"github.com/KarineAyrs/udemyBMWAG/internal/driver"
 	"github.com/KarineAyrs/udemyBMWAG/internal/handlers"
@@ -30,6 +31,17 @@ func main() {
 	defer db.SQL.Close()
 
 	defer close(app.MailChan)
+
+	fmt.Println("starting mail listener...")
+	listenForMail()
+
+	msg := models.MailData{
+		To:      "john@do.ca",
+		From:    "me@here.com",
+		Subject: "some subject",
+		Content: "",
+	}
+	app.MailChan <- msg
 
 	srv := &http.Server{
 		Addr:    portNumber,
