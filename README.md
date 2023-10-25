@@ -33,3 +33,7 @@ PSQL useful commands:
 Go test coverage in html page:
 
 - `go test -coverprofile=coverage.out && go tool cover -html=coverage.out`
+
+Pretty email templates:
+
+- [Foundation](https://get.foundation/emails/getting-started.html) 
