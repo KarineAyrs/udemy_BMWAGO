@@ -4,9 +4,6 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	"github.com/KarineAyrs/udemyBMWAG/internal/driver"
-	"github.com/KarineAyrs/udemyBMWAG/internal/models"
-	"github.com/stretchr/testify/assert"
 	"log"
 	"net/http"
 	"net/http/httptest"
@@ -14,6 +11,10 @@ import (
 	"reflect"
 	"strings"
 	"testing"
+
+	"github.com/KarineAyrs/udemyBMWAG/internal/driver"
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
+	"github.com/stretchr/testify/assert"
 )
 
 type postData struct {
@@ -481,7 +482,7 @@ func TestRepository_AvailabilityJSON(t *testing.T) {
 	// since we have no rooms available, we expect to get status http.StatusSeeOther
 	// this time we want to parse JSON and get the expected response
 	var j jsonResponse
-	err := json.Unmarshal([]byte(rr.Body.String()), &j)
+	err := json.Unmarshal(rr.Body.Bytes(), &j)
 	if err != nil {
 		t.Error("failed to parse json!")
 	}
@@ -520,7 +521,7 @@ func TestRepository_AvailabilityJSON(t *testing.T) {
 	handler.ServeHTTP(rr, req)
 
 	// this time we want to parse JSON and get the expected response
-	err = json.Unmarshal([]byte(rr.Body.String()), &j)
+	err = json.Unmarshal(rr.Body.Bytes(), &j)
 	if err != nil {
 		t.Error("failed to parse json!")
 	}
@@ -554,7 +555,7 @@ func TestRepository_AvailabilityJSON(t *testing.T) {
 	handler.ServeHTTP(rr, req)
 
 	// this time we want to parse JSON and get the expected response
-	err = json.Unmarshal([]byte(rr.Body.String()), &j)
+	err = json.Unmarshal(rr.Body.Bytes(), &j)
 	if err != nil {
 		t.Error("failed to parse json!")
 	}
@@ -591,7 +592,7 @@ func TestRepository_AvailabilityJSON(t *testing.T) {
 	handler.ServeHTTP(rr, req)
 
 	// this time we want to parse JSON and get the expected response
-	err = json.Unmarshal([]byte(rr.Body.String()), &j)
+	err = json.Unmarshal(rr.Body.Bytes(), &j)
 	if err != nil {
 		t.Error("failed to parse json!")
 	}

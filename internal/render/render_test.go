@@ -1,9 +1,10 @@
 package render
 
 import (
-	"github.com/KarineAyrs/udemyBMWAG/internal/models"
 	"net/http"
 	"testing"
+
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
 )
 
 func TestAddDefaultData(t *testing.T) {

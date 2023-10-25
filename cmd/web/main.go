@@ -3,6 +3,11 @@ package main
 import (
 	"encoding/gob"
 	"fmt"
+	"log"
+	"net/http"
+	"os"
+	"time"
+
 	"github.com/KarineAyrs/udemyBMWAG/internal/config"
 	"github.com/KarineAyrs/udemyBMWAG/internal/driver"
 	"github.com/KarineAyrs/udemyBMWAG/internal/handlers"
@@ -10,10 +15,6 @@ import (
 	"github.com/KarineAyrs/udemyBMWAG/internal/models"
 	"github.com/KarineAyrs/udemyBMWAG/internal/render"
 	"github.com/alexedwards/scs/v2"
-	"log"
-	"net/http"
-	"os"
-	"time"
 )
 
 const portNumber = ":8080"

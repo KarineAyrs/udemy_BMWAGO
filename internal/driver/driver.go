@@ -2,10 +2,11 @@ package driver
 
 import (
 	"database/sql"
+	"time"
+
 	_ "github.com/jackc/pgx/v5"
 	_ "github.com/jackc/pgx/v5/pgconn"
 	_ "github.com/jackc/pgx/v5/stdlib"
-	"time"
 )
 
 // DB holds the database connection pool

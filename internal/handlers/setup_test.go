@@ -3,13 +3,6 @@ package handlers
 import (
 	"encoding/gob"
 	"fmt"
-	"github.com/KarineAyrs/udemyBMWAG/internal/config"
-	"github.com/KarineAyrs/udemyBMWAG/internal/models"
-	"github.com/KarineAyrs/udemyBMWAG/internal/render"
-	"github.com/alexedwards/scs/v2"
-	"github.com/go-chi/chi/v5"
-	"github.com/go-chi/chi/v5/middleware"
-	"github.com/justinas/nosurf"
 	"html/template"
 	"log"
 	"net/http"
@@ -17,6 +10,14 @@ import (
 	"path/filepath"
 	"testing"
 	"time"
+
+	"github.com/KarineAyrs/udemyBMWAG/internal/config"
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
+	"github.com/KarineAyrs/udemyBMWAG/internal/render"
+	"github.com/alexedwards/scs/v2"
+	"github.com/go-chi/chi/v5"
+	"github.com/go-chi/chi/v5/middleware"
+	"github.com/justinas/nosurf"
 )
 
 var app config.AppConfig
@@ -97,7 +98,7 @@ func getRoutes() http.Handler {
 func listenForMail() {
 	go func() {
 		for {
-			_ = <-app.MailChan
+			<-app.MailChan
 		}
 	}()
 }

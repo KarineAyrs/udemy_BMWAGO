@@ -2,14 +2,15 @@ package render
 
 import (
 	"encoding/gob"
-	"github.com/KarineAyrs/udemyBMWAG/internal/config"
-	"github.com/KarineAyrs/udemyBMWAG/internal/models"
-	"github.com/alexedwards/scs/v2"
 	"log"
 	"net/http"
 	"os"
 	"testing"
 	"time"
+
+	"github.com/KarineAyrs/udemyBMWAG/internal/config"
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
+	"github.com/alexedwards/scs/v2"
 )
 
 var session *scs.SessionManager

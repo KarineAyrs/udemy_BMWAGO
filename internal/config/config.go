@@ -1,10 +1,11 @@
 package config
 
 import (
-	"github.com/KarineAyrs/udemyBMWAG/internal/models"
-	"github.com/alexedwards/scs/v2"
 	"html/template"
 	"log"
+
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
+	"github.com/alexedwards/scs/v2"
 )
 
 // AppConfig holds the application config

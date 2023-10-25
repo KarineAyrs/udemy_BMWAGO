@@ -2,12 +2,13 @@ package main
 
 import (
 	"fmt"
-	"github.com/KarineAyrs/udemyBMWAG/internal/models"
-	mail "github.com/xhit/go-simple-mail/v2"
 	"log"
 	"os"
 	"strings"
 	"time"
+
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
+	mail "github.com/xhit/go-simple-mail/v2"
 )
 
 func listenForMail() {

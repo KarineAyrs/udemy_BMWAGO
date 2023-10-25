@@ -4,13 +4,14 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/KarineAyrs/udemyBMWAG/internal/config"
-	"github.com/KarineAyrs/udemyBMWAG/internal/models"
-	"github.com/justinas/nosurf"
 	"html/template"
 	"log"
 	"net/http"
 	"path/filepath"
+
+	"github.com/KarineAyrs/udemyBMWAG/internal/config"
+	"github.com/KarineAyrs/udemyBMWAG/internal/models"
+	"github.com/justinas/nosurf"
 )
 
 var app *config.AppConfig
