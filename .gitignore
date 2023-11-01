@@ -125,3 +125,5 @@ internal/forms/coverage.out
 bookings
 database.yml
 migrations/schema.sql
+migrations/20231101153059_insert_admin_user_to_users.postgres.up.sql
+migrations/20231101153059_insert_admin_user_to_users.postgres.down.sql
